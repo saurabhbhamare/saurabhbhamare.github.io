@@ -30,8 +30,8 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
     --nav-color: #EAEAEA; /* The default color of the main navmenu links */
-    --nav-hover-color: #000000; /* Applied to main navmenu links when they are hovered over or active */
-    --nav-mobile-background-color: #f5f5f5; /* Used as the background color for mobile navigation menu */
+    --nav-hover-color: #5b5b5b; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #A8A8A8; /* Used as the background color for mobile navigation menu */
     --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
     --nav-dropdown-color: #5b5b5b; /* Used for navigation links of the dropdown items in the navigation menu. */
     --nav-dropdown-hover-color: #000000; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
@@ -43,6 +43,7 @@
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
 }
+
 
 .dark-background {
   --background-color: #060606;
@@ -441,7 +442,7 @@ h5{
 
 .page-title h1 {
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 200;
   margin-bottom: 10px;
 }
 
@@ -452,7 +453,7 @@ h5{
   justify-content: center;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -839,21 +840,21 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .content h2 {
-  font-weight: 400;
-  
-  font-size: 32px;
+    font-weight: 200;
+    font-size: 32px;
 }
 
 .about .content ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-}
+    .about .content ul li {
+        margin-bottom: 20px;
+        display: flex;
+        color: var(--heading-color);
+        align-items: center;
+    }
 
 .about .content ul strong {
   margin-right: 10px;
@@ -1100,7 +1101,7 @@ section,
 
 .portfolio-details .portfolio-info h3 {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 400;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);

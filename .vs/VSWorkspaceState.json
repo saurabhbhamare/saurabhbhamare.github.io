@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\assets",
-    "\\assets\\css"
+    "\\assets\\pages",
+    "\\assets\\vendor\\bootstrap"
   ],
-  "SelectedNode": "\\about.html",
+  "SelectedNode": "\\assets\\pages\\papyrus.html",
   "PreviewInSolutionExplorer": false
 }
