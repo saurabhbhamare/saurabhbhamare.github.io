@@ -19,7 +19,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-    --background-color: #222222; /* Background color for the entire website, including individual sections */
+    --background-color: #000000; /* Background color for the entire website, including individual sections */
     --default-color: #A8A8A8; /* Default color used for the majority of the text content across the entire website */
     --heading-color: #EAEAEA; /* Color for headings, subheadings and title throughout the website */
     --accent-color: #000000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -76,7 +76,7 @@ a:hover {
   text-decoration: none;
 }
 
-h1,
+/*h1,*/
 h2,
 h3,
 h4,
@@ -89,6 +89,16 @@ h6 {
 h5 {
     color:var(--default-color)
    /*// font-weight: 400;*/ /* Adjust this value to your desired weight for h5 */
+    
+}
+h1{
+    font-weight: 300;
+}
+h3{
+    font-weight: 300
+}
+h5{
+    font-weight: 300;
 }
 /* PHP Email Form Messages
 ------------------------------*/
@@ -163,9 +173,9 @@ h5 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 38px;
   margin: 0;
-  font-weight: 700;
+  font-weight: 200;
   color: var(--heading-color);
 }
 
@@ -301,7 +311,7 @@ h5 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(#000000);
   font-size: 14px;
   padding: 40px 0;
   position: relative;
@@ -319,12 +329,12 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+/*  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+*/  font-size: 30px;
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   margin: 0 5px;
   transition: 0.3s;
 }
@@ -337,7 +347,7 @@ h5 {
 .footer .credits {
   margin-top: 10px;
   font-size: 13px;
-  text-align: center;
+  text-align: left;
 }
 
 /*--------------------------------------------------------------
@@ -481,14 +491,14 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  text-align: center;
+  text-align: left;
   padding-bottom: 60px;
   position: relative;
 }
 
 .section-title h2 {
   font-size: 32px;
-  font-weight: 400;
+  font-weight: 200;
   margin-bottom: 15px;
 }
 
@@ -500,8 +510,11 @@ section,
 # Portfolio Section
 --------------------------------------------------------------*/
 .portfolio .portfolio-info h3 {
-  font-size: 24px;
+  font-size: 32px;
   margin-bottom: 5px;
+}
+.portfolio .portfolio-info h5{
+    font-size: 19px;
 }
 
 .portfolio .portfolio-info p {
@@ -826,8 +839,9 @@ section,
 # About Section
 --------------------------------------------------------------*/
 .about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 400;
+  
+  font-size: 32px;
 }
 
 .about .content ul {
@@ -850,6 +864,9 @@ section,
   margin-right: 5px;
   color: var(--accent-color);
   line-height: 0;
+}
+.about.header.h2{
+    font-size: 40px;
 }
 
 /*--------------------------------------------------------------
