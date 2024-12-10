@@ -20,8 +20,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
     --background-color: #000000; /* Background color for the entire website, including individual sections */
-    --default-color: #A8A8A8; /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #EAEAEA; /* Color for headings, subheadings and title throughout the website */
+    /*--default-color: #A8A8A8;*/ /* Default color used for the majority of the text content across the entire website */
+    --default-color: #000000; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #000000; /* Color for headings, subheadings and title throughout the website */
     --accent-color: #000000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
     --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -60,10 +61,29 @@
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
-body {
+/*body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+
+
+
+}*/
+body, header, main, content, section {
+    background-image: url("../img/Screenshot3.png");
+    background-repeat: repeat; /* This will make the image repeat */
+    background-attachment: fixed; /* This makes the background image fixed on the screen */
+    background-size: 160%; /* This scales the image to cover the entire element */
+    animation: moveZigzagBackground 60s linear infinite; /* Apply animation to both */
+}
+@keyframes moveZigzagBackground {
+    from {
+        background-position: 200% 0;
+    }
+
+    to {
+        background-position: 0 0; /* Adjust this value based on the image and speed you want */
+    }
 }
 
 a {
@@ -79,13 +99,13 @@ a:hover {
 
 /*h1,*/
 h2,
-h3,
 h4,
 h5,
 h6 {
-    color: var(--heading-color);
+/*    color: var(--heading-color);
+*/    color: var(#000000);
     font-family: var(--heading-font);
-    font-weight: 100; /* Thinner weight */
+    font-weight: 200; /* Thinner weight */
 }
 h5 {
     color:var(--default-color)
@@ -96,7 +116,8 @@ h1{
     font-weight: 300;
 }
 h3{
-    font-weight: 300
+    color:black;
+    font-weight: 300;
 }
 h5{
     font-weight: 300;
@@ -159,7 +180,7 @@ h5{
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 40px 94px;
+  padding: 40px 96px;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -174,9 +195,9 @@ h5{
 }
 
 .header .logo h1 {
-  font-size: 38px;
+  font-size: 42px;
   margin: 0;
-  font-weight: 200;
+  font-weight: 400;
   color: var(--heading-color);
 }
 
@@ -185,10 +206,11 @@ h5{
 --------------------------------------------------------------*/
 /* Navmenu */
 .mobile-nav-toggle {
-  color: var(--nav-color);
+/*  color: var(--nav-color);*/
+  color: var(--background-color);
   position: fixed;
-  top: 40px;
-  right: 104px;
+  top: 70px;
+  right: 208px;
   font-size: 32px;
   line-height: 0;
   cursor: pointer;
@@ -434,13 +456,14 @@ h5{
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 120px 0;
-  text-align: center;
+  background-color: var(#000000);
+/*  padding: 120px 0;
+*/  text-align: center;
   position: relative;
 }
 
 .page-title h1 {
+  /*color : navajowhite;*/
   font-size: 42px;
   font-weight: 200;
   margin-bottom: 10px;
@@ -458,14 +481,23 @@ h5{
 }
 
 .page-title .breadcrumbs ol li+li {
+    color : var(--default-color);
   padding-left: 10px;
+}
+.page-title .breadcrumbs ol li a {
+/*  color : var(--default-color);
+*/ 
+color: white;
+padding-left: 10px;
 }
 
 .page-title .breadcrumbs ol li+li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+/*  color: color-mix(in srgb, var(--default-color), transparent 70%);
+*/  color: white;
+  
 }
 
 /*--------------------------------------------------------------
@@ -510,11 +542,21 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
+/*.portfolio .portfolio-info {
+    font-size: 32px;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    font-weight: 200;
+}*/
 .portfolio .portfolio-info h3 {
-  font-size: 32px;
-  margin-bottom: 5px;
+  font-weight: 200;
+  font-size: 42px;
+  margin-bottom: 10px;
+  margin-top: 0px;
 }
 .portfolio .portfolio-info h5{
+    margin-bottom : 70px;
+    margin-top : -5px;
     font-size: 19px;
 }
 
@@ -525,18 +567,21 @@ section,
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
+ /* margin-top: 100px;
+  margin-bottom: 100px;*/
   list-style: none;
 }
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
   display: inline-block;
-  padding: 0;
+  padding: 10px;
   font-size: 16px;
   font-weight: 400;
-  margin: 0 10px;
+  /*margin: 10px 10px;*/
+  margin-top : 100px;
   line-height: 1;
-  margin-bottom: 5px;
+/*  margin-bottom: 5px;*/
   transition: all 0.3s ease-in-out;
 }
 
@@ -568,6 +613,7 @@ section,
 
 .portfolio .portfolio-content img {
   transition: 0.3s;
+  /*opacity: 0.9;*/
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -582,6 +628,11 @@ section,
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.portfolio.section
+{
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .portfolio .portfolio-content .portfolio-info h4 {
@@ -1131,6 +1182,9 @@ section,
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
+/*--------------------------------------------------------------
+# Project Page Section
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Service Details Section
@@ -1202,9 +1256,22 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
-  /* Add your styles here */
+    /* Add your styles here */
+    
+}
+.project-section {
+/*    color: black;
+*/}
+.projectinfo{
+    padding: 0px 100px 20px;
 }
 
+.ProjectInfoIMG {
+    /*width: 420px;*/ /* Adjust the width as needed */
+    /*height: 240px;*/ /* Adjust the height as needed */
+    object-fit: cover; /* This keeps the aspect ratio intact */
+   padding : 0px 10px 10px 10px;
+}
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
