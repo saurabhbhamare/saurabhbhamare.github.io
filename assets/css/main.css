@@ -194,9 +194,10 @@ h5{
   margin-right: 8px;
 }
 
-.header .logo h1 {
+.header .logo h3 {
   font-size: 42px;
   margin: 0;
+  margin-left:200px;
   font-weight: 400;
   color: var(--heading-color);
 }
@@ -1260,10 +1261,13 @@ section,
     
 }
 .project-section {
-/*    color: black;
-*/}
+    margin-left: 200px;
+    /*    color: black;
+*/
+}
 .projectinfo{
     padding: 0px 100px 20px;
+    margin-left:200px;
 }
 
 .ProjectInfoIMG {
