@@ -1,0 +1,263 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap&font-display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap&font-display=swap');
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0px;
+    font-family: 'Handjet', serif;
+    background-color: ghostwhite;
+    background-image: url("../img/Pixelated3.png");
+    background-size: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: moveZigzagBackground 240s linear infinite;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+    body.fade-in {
+        opacity: 1;
+    }
+
+
+
+@keyframes moveZigzagBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 200% 200%;
+    }
+}
+
+.small-font {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    padding: 20px;
+    text-align: left;
+}
+
+header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+    header h1 {
+        font-weight: 400;
+        font-size: 4.2em;
+        color: black;
+        padding-left: 20px;
+    }
+
+.SiteName {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    padding-left: 20px;
+}
+
+    main p {
+        font-weight: 400;
+        font-size: 2.4em;
+        color: black;
+        text-align: justify;
+        margin-top: 0; /* Remove any margin-top to reset gap */
+    }
+
+        main p a {
+            font-weight: 400;
+        }
+
+    main a {
+        color: #278fe6;
+        text-decoration: none;
+    }
+
+        main a:hover {
+            text-decoration: underline;
+        }
+
+.vertical-nav {
+    position: absolute;
+    right: 70px;
+    top: 60px;
+    text-align: right;
+}
+
+    .vertical-nav a {
+        font-size: 22px;
+        display: block;
+        margin: 10px 0;
+        text-decoration: none;
+        color: black;
+    }
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    header {
+        justify-content: left;
+    }
+
+        header h1 {
+            font-size: 2em;
+            text-align: left;
+        }
+
+    main p {
+        font-size: 1em;
+    }
+
+    .vertical-nav {
+        right: 35px;
+        top: 35px;
+        transform: none;
+    }
+
+        .vertical-nav a {
+            font-size: 16px; /* Adjust font size for mobile screens */
+        }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%;
+        margin-bottom: 20px;
+        position: static;
+    }
+
+        .project-card img {
+            width: 100%;
+            height: auto;
+        }
+
+    .fallback-text {
+        font-size: 12px;
+    }
+}
+
+/* Projects */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 600px;
+    margin: 20px 0;
+}
+
+    .projects-container p {
+        font-size: 30px;
+    }
+
+.project-card {
+    position: absolute;
+    transition: transform 0.2s;
+}
+
+    .project-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: filter 0.2s;
+    }
+
+    .project-card:hover img {
+        filter: brightness(70%);
+    }
+
+    .project-card a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+.fallback-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Define positions for the scattered project cards */
+.project-card:nth-child(1) {
+    width: 840px;
+    height: 500px;
+    top: 20px;
+    left: 0px;
+}
+
+.project-card:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    top: 520px;
+    left: 440px;
+}
+
+.project-card:nth-child(3) {
+    width: 400px;
+    height: 250px;
+    top: 520px;
+    left: 0px;
+}
+
+.project-card:nth-child(4) {
+    width: 400px;
+    height: 200px;
+    top: 780px;
+    left: 0px;
+}
+
+.project-card:nth-child(5) {
+    width: 600px;
+    height: 250px;
+    top: 1040px;
+    left: 0px;
+}
+
+.project-card:nth-child(6) {
+    width: 600px;
+    height: 355px;
+    top: 1410px;
+    left: 0px;
+}
+
+.project-card:nth-child(7) {
+    width: 202px;
+    height: 180px;
+    top: 960px;
+    left: 640px;
+}
