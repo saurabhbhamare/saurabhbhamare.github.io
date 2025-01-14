@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POSTS | Saurabh Bhamare</title>
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load the Web Font Loader script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <!-- Load the stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Link to your custom CSS file -->
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="hidden">
+    <div class="container">
+        <header>
+            <h1><a href="index.html" class="SiteName">Saurabh Bhamare</a></h1>
+        </header>
+
+        <main>
+            <!--<h2>Posts</h2>-->
+            <p>here you can find posts about game programming and mathematics</p>
+
+            <div class="post-category">
+                <h3>Programming</h3>
+                <ul>
+                    <li><a href="posts/game-programming-post1.html">Transform Functions</a></li>
+                    <!--<li><a href="posts/game-programming-post2.html">Creating Interactive Game Elements</a></li>
+                    <li><a href="posts/game-programming-post3.html">Optimizing Performance in Game Development</a></li>-->
+                </ul>
+            </div>
+
+            <div class="post-category">
+                <h3>Mathematics</h3>
+                <ul>
+                    <li><a href="posts/mathematics-post1.html">Vectors and Matrices</a></li>
+                    <!--<li><a href="posts/mathematics-post2.html">Understanding Trigonometry in Game Programming</a></li>
+                    <li><a href="posts/mathematics-post3.html">Linear Algebra for Graphics Programming</a></li>-->
+                </ul>
+            </div>
+
+            <div class="post-category">
+                <!--<h3>C++ Programming</h3>
+                <ul>
+                    <li><a href="posts/cpp-post1.html">C++ Basics for Game Development</a></li>
+                    <li><a href="posts/cpp-post2.html">Advanced C++ Techniques</a></li>
+                    <li><a href="posts/cpp-post3.html">Using C++ in Game Engines</a></li>
+                </ul>-->
+            </div>
+        </main>
+
+        <!--<footer>
+            <p id="date-time"></p>
+        </footer>-->
+    </div>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Handjet:wght@100..900&display=swap']
+            },
+            active: function () {
+                document.body.classList.remove('hidden');
+                document.body.classList.add('fade-in');
+            }
+        });
+
+        function updateTimeAndDate() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const dateTimeString = now.toLocaleDateString('en-US', options);
+            document.getElementById('date-time').textContent = dateTimeString;
+        }
+
+        // Update the time and date initially and then every second
+        updateTimeAndDate();
+        setInterval(updateTimeAndDate, 1000);
+    </script>
+</body>
+</html>

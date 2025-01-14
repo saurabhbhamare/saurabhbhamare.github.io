@@ -1,5 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap&font-display=swap');*/
+/* Ensure imports for fonts */
 @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap&font-display=swap');
 
 @keyframes fadeIn {
@@ -32,12 +31,17 @@ body {
     opacity: 0;
     transition: opacity 1s;
 }
+/* Media query for smaller screens */
+/*@media (max-width: 768px) {
+    body {
+        background-size: 28%;*/ /* Adjust this value as needed */
+    /*}
+}*/
 
-    body.fade-in {
-        opacity: 1;
-    }
 
-
+body.fade-in {
+    opacity: 1;
+}
 
 @keyframes moveZigzagBackground {
     from {
@@ -67,12 +71,12 @@ header {
     align-items: center;
 }
 
-    header h1 {
-        font-weight: 400;
-        font-size: 4.2em;
-        color: black;
-        padding-left: 20px;
-    }
+header h1 {
+    font-weight: 400;
+    font-size: 4.2em;
+    color: black;
+    padding-left: 20px;
+}
 
 .SiteName {
     color: black;
@@ -83,26 +87,26 @@ main {
     padding-left: 20px;
 }
 
-    main p {
-        font-weight: 400;
-        font-size: 2.4em;
-        color: black;
-        text-align: justify;
-        margin-top: 0; /* Remove any margin-top to reset gap */
-    }
+main p {
+    font-weight: 400;
+    font-size: 2.4em;
+    color: black;
+    text-align: justify;
+    margin-top: 0; /* Remove any margin-top to reset gap */
+}
 
-        main p a {
-            font-weight: 400;
-        }
+main p a {
+    font-weight: 400;
+}
 
-    main a {
-        color: #278fe6;
-        text-decoration: none;
-    }
+main a {
+    color: #278fe6;
+    text-decoration: none;
+}
 
-        main a:hover {
-            text-decoration: underline;
-        }
+main a:hover {
+    text-decoration: underline;
+}
 
 .vertical-nav {
     position: absolute;
@@ -111,96 +115,43 @@ main {
     text-align: right;
 }
 
-    .vertical-nav a {
-        font-size: 22px;
-        display: block;
-        margin: 10px 0;
-        text-decoration: none;
-        color: black;
-    }
-
-/* Media query for smaller screens */
-@media (max-width: 600px) {
-    header {
-        justify-content: left;
-    }
-
-        header h1 {
-            font-size: 2em;
-            text-align: left;
-        }
-
-    main p {
-        font-size: 1em;
-    }
-
-    .vertical-nav {
-        right: 35px;
-        top: 35px;
-        transform: none;
-    }
-
-        .vertical-nav a {
-            font-size: 16px; /* Adjust font size for mobile screens */
-        }
-
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        width: 90%;
-        margin-bottom: 20px;
-        position: static;
-    }
-
-        .project-card img {
-            width: 100%;
-            height: auto;
-        }
-
-    .fallback-text {
-        font-size: 12px;
-    }
+.vertical-nav a {
+    font-size: 22px;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: black;
 }
 
-/* Projects */
+/* Projects Container */
 .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between project cards */
     margin: 20px 0;
 }
 
-    .projects-container p {
-        font-size: 30px;
-    }
-
 .project-card {
-    position: absolute;
+    position: relative; /* Needed for absolute positioning of project name */
     transition: transform 0.2s;
 }
 
-    .project-card img {
-        width: 100%;
-        height: auto;
-        display: block;
-        transition: filter 0.2s;
-    }
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: filter 0.2s;
+}
 
-    .project-card:hover img {
-        filter: brightness(70%);
-    }
+.project-card:hover img {
+    filter: brightness(70%);
+}
 
-    .project-card a {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-    }
+.project-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
 
 .fallback-text {
     position: absolute;
@@ -210,54 +161,199 @@ main {
     color: white;
     font-size: 16px;
     font-weight: bold;
+    text-align: center; /* Center text within fallback area */
 }
 
-/* Define positions for the scattered project cards */
-.project-card:nth-child(1) {
-    width: 840px;
-    height: 500px;
-    top: 20px;
-    left: 0px;
+/* Centering project name */
+.project-card p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 26px;
+    font-weight:500;
+    /*font-weight: bold;*/
+    margin: 0; /* Remove margin */
+    text-align: center; /* Center text within project card */
 }
 
-.project-card:nth-child(2) {
-    width: 400px;
-    height: 400px;
-    top: 520px;
-    left: 440px;
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        justify-content: left;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+        text-align: left;
+    }
+
+    main p {
+        font-size: 1.2em;
+    }
+
+    .vertical-nav {
+        right: 35px;
+        top: 35px;
+    }
+
+    .vertical-nav a {
+        font-size: 16px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+
+    .project-card {
+        background-color-black;
+        width: 100%;
+    }
+
+    .project-card img {
+ 
+        width: 100%;
+        height: auto;
+    }
+
+    .project-card p {
+        font-size: 14px;
+    }
+
+    .fallback-text {
+        font-size: 12px;
+    }
 }
 
-.project-card:nth-child(3) {
-    width: 400px;
-    height: 250px;
-    top: 520px;
-    left: 0px;
+
+
+
+
+
+/*-----------------------------------------Glitch Effect Test------------------------------------------*/
+
+.glitch {
+    position: relative;
+    color: #f00;
+    font-size: 3em;
+    animation: glitch 1s infinite;
 }
 
-.project-card:nth-child(4) {
-    width: 400px;
-    height: 200px;
-    top: 780px;
-    left: 0px;
+    .glitch:before,
+    .glitch:after {
+        content: attr(data-text);
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: #000;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+    }
+
+    .glitch:before {
+        top: -2px;
+        left: 2px;
+        text-shadow: -2px 0 #00f;
+        animation: glitchTop 1s infinite;
+    }
+
+    .glitch:after {
+        bottom: -2px;
+        left: -2px;
+        text-shadow: -2px 0 #0f0;
+        animation: glitchBottom 1s infinite;
+    }
+
+@keyframes glitch {
+    0% {
+        transform: none;
+    }
+
+    20% {
+        transform: skew(-0.5deg, -0.5deg);
+    }
+
+    40% {
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    60% {
+        transform: skew(-0.5deg, -0.5deg);
+    }
+
+    80% {
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    100% {
+        transform: none;
+    }
 }
 
-.project-card:nth-child(5) {
-    width: 600px;
-    height: 250px;
-    top: 1040px;
-    left: 0px;
+@keyframes glitchTop {
+    0% {
+        clip: rect(2px, 9999px, 44px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    20% {
+        clip: rect(15px, 9999px, 56px, 0);
+        transform: skew(-0.5deg, -0.5deg);
+    }
+
+    40% {
+        clip: rect(10px, 9999px, 50px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    60% {
+        clip: rect(5px, 9999px, 55px, 0);
+        transform: skew(-0.5deg, -0.5deg);
+    }
+
+    80% {
+        clip: rect(25px, 9999px, 60px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    100% {
+        clip: rect(2px, 9999px, 44px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
 }
 
-.project-card:nth-child(6) {
-    width: 600px;
-    height: 355px;
-    top: 1410px;
-    left: 0px;
+@keyframes glitchBottom {
+    0% {
+        clip: rect(85px, 9999px, 140px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    20% {
+        clip: rect(60px, 9999px, 130px, 0);
+        transform: skew(-0.5deg, -0.5deg);
+    }
+
+    40% {
+        clip: rect(70px, 9999px, 145px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    60% {
+        clip: rect(80px, 9999px, 135px, 0);
+        transform: skew(-0.5deg, -0.5deg);
+    }
+
+    80% {
+        clip: rect(90px, 9999px, 140px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
+
+    100% {
+        clip: rect(85px, 9999px, 140px, 0);
+        transform: skew(0.5deg, 0.5deg);
+    }
 }
 
-.project-card:nth-child(7) {
-    width: 202px;
-    height: 180px;
-    top: 960px;
-    left: 640px;
-}
+
+/*-----------------------------------------Glitch Effect Test End------------------------------------------*/
