@@ -31,12 +31,12 @@ body {
     opacity: 0;
     transition: opacity 1s;
 }
-/* Media query for smaller screens */
-/*@media (max-width: 768px) {
+
+@media (max-width: 768px) {
     body {
-        background-size: 28%;*/ /* Adjust this value as needed */
-    /*}
-}*/
+        background-size: 28%; 
+    }
+}
 
 
 body.fade-in {
@@ -207,7 +207,6 @@ main a:hover {
     }
 
     .project-card {
-        background-color-black;
         width: 100%;
     }
 
