@@ -116,7 +116,8 @@ main a:hover {
 }
 
 .vertical-nav a {
-    font-size: 22px;
+    font-size: 20px;
+    font-weight:600;
     display: block;
     margin: 10px 0;
     text-decoration: none;
