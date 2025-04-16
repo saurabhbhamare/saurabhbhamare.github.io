@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Papyrus | Saurabh Bhamare</title>
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load the Web Font Loader script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <!-- Load the stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="hidden">
+    <div class="container">
+        <header>
+            <h1><a href="index.html" class="SiteName">Saurabh Bhamare</a></h1>
+        </header>
+        <nav class="vertical-nav">
+            <!--<a href="index.html">_ HOME</a>
+            <a href="index.html">_ PROJECTS</a>
+            <a href="index.html">_ ABOUT</a>
+            <a href="index.html">_ CONTACT</a>-->
+            <a href="index.html">_ HOME</a>
+            <a href="projects.html">_ WORK</a>
+            <!--<a href="projects.html">_ WORK</a>-->
+        </nav>
+
+        <main>
+            <h1>Papyrus (Still Working)</h1>
+            <section class="repository-link">
+                <a href="https://github.com/saurabhbhamare/Papyrus/tree/feature/level1-implementation/Assets" class="link">Take an in-depth look at the detailed code implementation of Papyrus by visiting this Repository link provided for the Project :)</a>
+            </section>
+
+            <section class="description">
+                <h2>Description</h2>
+                <ul>
+                    <li>
+                        2D platformer game created using Unity. The game features puzzles that players must solve to unlock doors to the next levels. Players will encounter enemies like snakes and bees, which they must defeat to progress. 
+                        Currently, the project is in the prototype stage, with all elements contained within a single frame.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>
+                        <strong>Player Movement:</strong> The player is equipped with dynamic abilities, including movement, jumping, and shooting bullets, offering a versatile and action-packed gameplay experience.
+                    </li>
+                    <li>
+                        <strong>Sun's Redemption':</strong> A creative puzzle challenge where the sun is hidden behind shadowy clouds. 
+                        Players must strategically move other clouds into the shadows, revealing the sun and unlocking the key to progress.
+                    </li>
+                    <li><strong>Level:</strong> Designed a visually unique level inspired by a paper theme, incorporating handcrafted aesthetics. Developed a wine set and crafted engaging challenges using base assets,
+                    blending creativity with functionality to enhance the gameplay experience.</li>
+                </ul>
+            </section>
+            <section class="implementation-details">
+                <h2>Implementation Details</h2>
+                <ul>
+                    <li>
+                        <strong>Service Handler:</strong> Responsible for the management of PlayerService, Enemy and UIService.
+                    </li>
+                    <li>
+                        <strong>Player MVC:</strong> Implemented the player functionality using the MVC (Model-View-Controller) design pattern. This approach ensures a clean separation of concerns,
+                        with the model managing player data, the view handling graphical representation,
+                        and the controller coordinating interactions and gameplay logic for efficient and maintainable code.
+                    </li>
+                    <li>
+                        <strong>Resource Pooling:</strong> Implemented resource pooling to manage player bullets, reducing memory usage and optimizing performance.
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Handjet:wght@100..900&display=swap']
+            },
+            active: function () {
+                document.body.classList.remove('hidden');
+                document.body.classList.add('fade-in');
+            }
+        });
+    </script>
+</body>
+</html>

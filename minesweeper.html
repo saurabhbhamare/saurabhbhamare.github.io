@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Minesweeper | Saurabh Bhamare</title>
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load the Web Font Loader script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <!-- Load the stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="hidden">
+    <div class="container">
+        <header>
+            <h1><a href="index.html" class="SiteName">Saurabh Bhamare</a></h1>
+        </header>
+        <nav class="vertical-nav">
+            <!--<a href="index.html">_ HOME</a>
+            <a href="index.html">_ PROJECTS</a>
+            <a href="index.html">_ ABOUT</a>
+            <a href="index.html">_ CONTACT</a>-->
+            <a href="index.html">_ HOME</a>
+            <a href="projects.html">_ WORK</a>
+            <!--<a href="projects.html">_ WORK</a>-->
+        </nav>
+
+        <main>
+            <h1>Minesweeper</h1>
+            <section class="repository-link">
+                <a href="https://github.com/saurabhbhamare/Minesweeper-SDL2/tree/ScreenStateImplementation/MINESWEEPER" class="link">Take an in-depth look at the detailed code implementation of Minesweeper by visiting this Repository link provided for the Project :)</a>
+            </section>
+
+            <section class="description">
+                <h2>Description</h2>
+                <ul>
+                    <li>
+                        Minesweeper is a classic single-player puzzle computer game created using C++ and the SDL2 library. The objective is to clear a rectangular board containing hidden 'mines' or bombs without detonating any of them.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>
+                        <strong>Grid:</strong> 12x12 grid of Minesweeper tiles, enhanced with a sleek, modern design for the textures, offering a visually appealing experience crafted by CreatorModelIvesky.
+                    </li>
+                    <li>
+                        <strong>Main Menu:</strong> Created a simple main menu with key input-based menu selection.
+                    </li>
+                    <li><strong>Sounds:</strong> Integrated sound effects for tile opening, mines, and flag placement, enhancing gameplay immersion. These were implemented using the SDL_Mixer library for seamless audio functionality.</li>
+                </ul>
+            </section>
+            <section class="implementation-details">
+                <h2>Implementation Details</h2>
+                <ul>
+                    <li>
+                        <strong>Window Class:</strong> Handles the window creation and initialization process.
+                    </li>
+                    <li>
+                        <strong>Tile Class:</strong> This class handles the core logic for Minesweeper, including initializing the tile matrix, placing mines, and calculating adjacent mine counts. It also manages functionalities like flagging tiles,
+                        validating tile indices, and integrating sound effects using SDL_Mixer. The class ensures smooth gameplay through efficient algorithms and robust structure.
+                    </li>
+                    <li>
+                        <strong>Render Class:</strong>This class manages the rendering and game state logic for Minesweeper. It initializes textures, handles various game states (main menu, gameplay, win, and lose), and renders tiles and numbers dynamically based on the game's progress.
+                        The class also includes flood-fill logic for revealing tiles, sound effects integration using SDL_Mixer, and efficient memory management for textures and resources.
+                    </li>
+                    <li>
+                        <strong>Text and Sound Class:</strong> Handles SDL_Mixer for sound like mine click, tile opening, flag placement, TTF for text implementation in menus.
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Handjet:wght@100..900&display=swap']
+            },
+            active: function () {
+                document.body.classList.remove('hidden');
+                document.body.classList.add('fade-in');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reward System | Saurabh Bhamare</title>
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load the Web Font Loader script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <!-- Load the stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="hidden">
+    <div class="container">
+        <header>
+            <h1><a href="index.html" class="SiteName">Saurabh Bhamare</a></h1>
+        </header>
+        <nav class="vertical-nav">
+            <!--<a href="index.html">_ HOME</a>
+            <a href="index.html">_ PROJECTS</a>
+            <a href="index.html">_ ABOUT</a>
+            <a href="index.html">_ CONTACT</a>-->
+            <a href="index.html">_ HOME</a>
+            <a href="projects.html">_ WORK</a>
+            <!--<a href="projects.html">_ WORK</a>-->
+        </nav>
+
+        <main>
+            <h1>Reward System</h1>
+            <section class="repository-link">
+                <a href="https://github.com/saurabhbhamare/RewardSystem/tree/ChestSystemUpdated/Assets" class="link">Take an in-depth look at the detailed code implementation of Reward System by visiting this Repository link provided for the Project :)</a>
+            </section>
+
+            <section class="description">
+                <h2>Description</h2>
+                <ul>
+                    <li>
+                        Developed a dynamic reward system in Unity that generates random chests categorized as common, rare, epic, and legendary. Players can unlock these chests using a timer or by spending coins,
+                        creating an engaging and rewarding gameplay experience. This system adds an element of chance and strategy, enhancing player interaction and enjoyment.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>
+                        <strong>Unlocking:</strong> Implemented a queue-based unlocking system where chests set to unlock via a timer are queued sequentially. Once the first chest is unlocked, the timer for the next chest in the queue begins automatically.
+                        Players also have the option to bypass the timer and unlock chests instantly using coins, adding flexibility and enhancing the gameplay experience.
+                    </li>
+                    <li>
+                        <strong>System UI:</strong> Developed a UI notification system that triggers after unlocking a chest, 
+                        providing players with immediate feedback. Additionally, implemented a feature to generate random chests on the home screen.
+                    </li>
+                </ul>
+            </section>
+            <section class="implementation-details">
+                <h2>Implementation Details</h2>
+                <ul>
+                    <li>
+                        <strong>UI Manager:</strong> The ChestUIManager class manages the user interface for the chest system in a Unity game. It handles the display and update of coins, gems, and other chest-related UI elements,
+                        manages interactions such as generating chests, deducting gems, and rewarding players, and communicates with event services to trigger and respond to gameplay events. It also ensures proper initialization of UI elements,
+                        updates the reward notification system, and unregisters event listeners when disabled. This class acts as a bridge between the chest system logic and its visual representation to the player
+                    </li>
+                    <li>
+                        <strong>Chest Service:</strong> The ChestService class manages the backend logic for chest-related functionalities, including generating new chests, handling chest interactions, unlocking chests via timers or gems,
+                        processing reward generation based on chest types, and maintaining a queue for sequential chest unlocking, all while interacting with an event service to trigger and manage related events effectively
+                    </li>
+                    <li>
+                        <strong>State Machine:</strong> The ChestStateMachine class manages state transitions for a chest in a Unity game. It uses a dictionary to store various chest states, associates these states with their corresponding behaviors,
+                        and facilitates state changes while ensuring proper entry and exit actions. This class serves as the controller for handling the chest's current state and its transitions dynamically
+                    </li>
+                    <li>
+                        <strong>Chest MVC:</strong> The MVC for the chest system divided into three distinct components: Model, which defines chest data and its properties; View, which handles the visual representation of chests in the game; and Controller,
+                        which manages the interaction logic between the model and the view, including state changes, rewards generation, and player interactions.
+                    </li>
+
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Handjet:wght@100..900&display=swap']
+            },
+            active: function () {
+                document.body.classList.remove('hidden');
+                document.body.classList.add('fade-in');
+            }
+        });
+    </script>
+</body>
+</html>

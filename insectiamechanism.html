@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Insectia | Saurabh Bhamare</title>
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load the Web Font Loader script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <!-- Load the stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="hidden">
+    <div class="container">
+        <header>
+            <h1><a href="index.html" class="SiteName">Saurabh Bhamare</a></h1>
+        </header>
+        <nav class="vertical-nav">
+            <!--<a href="index.html">_ HOME</a>
+            <a href="index.html">_ PROJECTS</a>
+            <a href="index.html">_ ABOUT</a>
+            <a href="index.html">_ CONTACT</a>-->
+            <a href="index.html">_ HOME</a>
+            <a href="projects.html">_ WORK</a>
+            <!--<a href="projects.html">_ WORK</a>-->
+        </nav>
+
+        <main>
+            <h1>Insectia Mechanism</h1>
+            <section class="repository-link">
+                <a href="https://github.com/saurabhbhamare/Insectia/tree/Projectile-Implementation/Assets" class="link">Take an in-depth look at the detailed code implementation of Insectia by visiting this Repository link provided for the Project :)</a>
+            </section>
+
+            <section class="description">
+                <h2>Description</h2>
+                <ul>
+                    <li>
+                        This 3D FPS game, developed in Unity, is set on the alien planet Insectia. Players must navigate a hostile environment where insect enemies chase them, shoot bullets, and attempt to take them down.
+                        To survive, players must dodge incoming attacks, strategically shoot back, and outlast their adversaries in this thrilling battle for survival.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>
+                        <strong>Player Movement:</strong> In this game, I’ve implemented a unique movement feature that simulates gravity changes on the alien planet. This adds an immersive element to the gameplay,
+                        making exploration feel dynamic and otherworldly.
+                    </li>
+                    <li>
+                        <strong>Enemies:</strong>Implemented two types of enemies: Larvae and Screecher. For Larvae, I utilized the AI NavMesh Follow feature to enable pathfinding, while for Screecher,
+                        I implemented functionality that allows it to shoot from the air at any angle.
+                    </li>
+                    <li><strong>Level:</strong> Created a base level for combat that provides the immersive feel of being on a distinct reddish planet.</li>
+                </ul>
+            </section>
+            <section class="implementation-details">
+                <h2>Implementation Details</h2>
+                <ul>
+                    <li>
+                        <strong>Main Handler:</strong> Responsible for managing essential resources and creating necessary services for the game.
+                        The resources include Scriptable Object references for players, Enemies. The services include PlayerService, BulletService, EnemyService and EventService.
+                    </li>
+                    <li><strong>Player Service:</strong> Developed the player using the MVC architecture, ensuring efficient separation of concerns and smooth functionality. Additionally,
+                    created and integrated the PlayerHUD into the screen, providing a clear and intuitive interface for enhanced user experience.</li>
+                    <li><strong>Enemy Service:</strong> Responsible for the creation of Larvaie and Screehcer.</li>
+                    <li><strong>Bullet Service:</strong> Handles Bullet implementation.</li>
+                    <li><strong>Dependency Injection:</strong> Implemented dependency injection in the main handler to efficiently manage services and provide the required dependencies.</li>
+                    <li><strong>Object Pooling:</strong> Used for the implementation of Player and Enemy bullets to optimize better game performamce.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Handjet:wght@100..900&display=swap']
+            },
+            active: function () {
+                document.body.classList.remove('hidden');
+                document.body.classList.add('fade-in');
+            }
+        });
+    </script>
+</body>
+</html>

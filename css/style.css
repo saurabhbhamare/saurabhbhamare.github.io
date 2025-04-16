@@ -14,6 +14,9 @@
 .hidden {
     visibility: hidden;
 }
+body {
+    cursor: url("../img/pixelated_cursor.png")0,0,auto; /* Fallback to auto if the custom cursor fails to load */
+}
 
 body {
     margin: 0;
@@ -77,6 +80,10 @@ header h1 {
     color: black;
     padding-left: 20px;
 }
+h4 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
 
 .SiteName {
     color: black;
@@ -89,7 +96,7 @@ main {
 
 main p {
     font-weight: 400;
-    font-size: 2.4em;
+    font-size: 2.3em;
     color: black;
     text-align: justify;
     margin-top: 0; /* Remove any margin-top to reset gap */
@@ -357,3 +364,47 @@ main a:hover {
 
 
 /*-----------------------------------------Glitch Effect Test End------------------------------------------*/
+
+/*-----------------------------------------Individual Project Page------------------------------------------*/
+
+.description p {
+    font-size: 1.3em; /* Adjust the size as needed */
+    font-weight:600;
+}
+
+.features ul li {
+    font-size: 1.3em; /* Adjust text size */
+    font-weight: 600;
+    color: #333; /* Change text color */
+    line-height: 1.5; /* Adjust spacing between lines */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+.tech-stack ul li {
+    font-size: 1.3em; /* Adjust text size */
+    font-weight: 600;
+    color: #333; /* Change text color */
+    line-height: 1.5; /* Adjust spacing between lines */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+.implementation-details ul li {
+    font-size: 1.3em; /* Adjust text size */
+    font-weight: 600;
+    color: #333; /* Change text color */
+    line-height: 1.5; /* Adjust spacing between lines */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+
+.description ul li {
+    font-size: 1.3em; /* Adjust text size */
+    font-weight: 600;
+    color: #333; /* Change text color */
+    line-height: 1.5; /* Adjust spacing between lines */
+    margin-bottom: 10px; /* Add spacing between list items */
+}
+.repository-link a{
+        font-size: 1.3em; /* Adjust text size */
+    font-weight: 600;
+    /*color: #333;*/ /* Change text color */
+    line-height: 1.5; /* Adjust spacing between lines */
+    margin-bottom: 10px; /* Add spacing between list items */
+}

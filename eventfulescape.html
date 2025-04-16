@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EventfulEscape | Saurabh Bhamare</title>
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Load the Web Font Loader script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"></script>
+    <!-- Load the stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="hidden">
+    <div class="container">
+        <header>
+            <h1><a href="index.html" class="SiteName">Saurabh Bhamare</a></h1>
+        </header>
+        <nav class="vertical-nav">
+            <!--<a href="index.html">_ HOME</a>
+            <a href="index.html">_ PROJECTS</a>
+            <a href="index.html">_ ABOUT</a>
+            <a href="index.html">_ CONTACT</a>-->
+            <a href="index.html">_ HOME</a>
+            <a href="projects.html">_ WORK</a>
+            <!--<a href="projects.html">_ WORK</a>-->
+        </nav>
+
+        <main>
+            <h1>Eventful Escape</h1>
+            <section class="repository-link">
+                <a href="https://github.com/saurabhbhamare/AvoidTheLight/tree/main/Assets" class="link">Take an in-depth look at the detailed code implementation of Avoid The Light by visiting this Repository link provided for the Project :)</a>
+            </section>
+
+            <section class="description">
+                <h2>Description</h2>
+                <ul>
+                    <li>
+                        Find hidden keys to unlock challenges and progress through a chilling 3D horror experience. Dare to survive.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="features">
+                <h2>Features</h2>
+                <ul>
+                    <li>
+                        <strong>Player Movement:</strong> Navigate the shadows as a bat using WASD controls! Dodge the lights and test your agility in this dynamic 2D game.
+                    </li>
+                    <li>
+                        <strong>Insect:</strong> Insects, as food for the bat, spawn at random locations on the screen. Eat them to increase your score.
+                    </li>
+                    <li><strong>Level:</strong> Created a base level for combat that provides the immersive feel of being on a distinct reddish planet.</li>
+                </ul>
+            </section>
+            <section class="implementation-details">
+                <h2>Implementation Details</h2>
+                <ul>
+                    <li>
+                        <strong>Player Controller:</strong> Responsible for Player Movement using WASD Keys and Collision Detection.
+                    </li>
+                    <li>
+                        <strong>Lights Controller:</strong> Handles the movement of lights on the screen, which the player must avoid.
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Handjet:wght@100..900&display=swap']
+            },
+            active: function () {
+                document.body.classList.remove('hidden');
+                document.body.classList.add('fade-in');
+            }
+        });
+    </script>
+</body>
+</html>
